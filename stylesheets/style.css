@@ -1,0 +1,86 @@
+/* CSS Document */
+
+/* ---------------
+
+Basic Structure
+ ------------*/
+#wrapper{
+	width:960px;
+	padding: 5px;
+	margin:20px;
+	
+}
+
+#header {
+	height: 100px;
+}
+
+#content {
+	float: right;
+	width: 600px;
+	color: blue;
+	
+}
+
+#sidebar {
+	float:left;
+	width: 300px;
+	
+}
+
+#footer {
+	clear: both;
+}
+
+/* ----------
+
+Colors and Fonts
+color.adobe.com
+FFFE00
+0029FF
+6FCC00
+00EBFF
+--------*/
+body {
+	font-family:Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+	color: rgba(184,75,0,0.50);
+	/*background-color: #FE0086;*/
+	background-image: url(../images/wolf.jpg);
+}
+#header, #sidebar, #content, #footer {
+	/*
+	
+	background-color: #13FF00;*/
+	margin-bottom: 4px;
+	border: double;
+	border-radius: 8px;
+	border-color: grey;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+/*-----------------
+
+RESPONSIVE DESIGN
+
+----------------*/
+
+@media screen and (max-width: 980px) {
+	
+}
+
+@media screen and (max-width: 700px) {
+	
+}
+
+@media screen and (max-width: 480px) {
+	
+}
+/*----------
+Phones
+---------*/
+@media only screen
+	and (min-device-width: 320px)
+	and (max-device-width: 568px) {
+		
+}

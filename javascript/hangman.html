@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Hangman!</title>
+</head>
+
+<body>
+	<h1>Hangman!</h1>
+	<script type="text/javascript">
+		// Create an array of words
+		var words = [
+			"javascript",
+			"minecraft",
+			"roblox",
+			"pancake",
+			"fortnite",
+			"forknife",
+			"vbucks",
+			"vbuxs",
+			"robuks",
+			"roblox",
+			"roblucks",
+			"robucks",
+			"dreamweaver",
+			"cops",
+			"halo",
+			"cod",
+			"playstation",
+			"xbox"
+		];
+		
+		//pick a random word
+		var word = words[Math.floor(Math.random() * words.length)];
+		
+		//set up an answer array
+		var answerArray = [];
+		for (var i = 0; i < word.length; i++) {
+			answerArray[i] = "_";
+		}
+		var remainingLetters = word.length;
+		
+		//The game loop
+		while (remainingLetters > 0) {
+			//Show players their progress
+			alert(answerArray.join(" "));
+		
+		
+		//Get a guess 
+		var input = prompt("Guess a letter, or click Cancel to stop playing.");
+		var guess = input.toLowerCase();
+		if(guess === null) {
+			//Exit the game loop
+			break;
+		} else if (guess.length !==1) {
+			alert("Please enter a single letter.");
+		} else {
+			//Update the game state with the guess
+			for (var j = 0; j < word.length; j++) {
+				if (word[j] === guess) {
+					answerArray[j] = guess;
+					remainingLetters--;
+				}
+			}
+		}
+			//The end of game loop
+		}
+		//Show the answer and congratulate the player
+		alert(answerArray.join(" "));
+		alert("Welcome to America your bully of a son of a goat! The answer was " + word);
+	</script>	
+</body>
+</html>

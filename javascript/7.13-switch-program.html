@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>7.13 - switch program</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+		var program = Number(prompt("Enter 1 to convert Fahrenheit to Celsius\n\nEnter 2 to convert Celsius to Fahrenheit\n\nEnter 3 to convert Dollar to Yen\n\nEnter 4 to convert Yen to Dollar"));
+		while (program){
+			if(program == 1){
+				var f = Number(prompt('Degrees in Fahrenheit?'));
+				var c = Number((f - 32) * (5 / 9));
+				document.write(c.toFixed(2) + ' degrees celsius');
+				break;
+				
+			} else if(program == 2){
+				var c2 = Number(prompt('Degrees in celsius?'));
+				var f2 = Number((c2 * (5 / 9)) + 32);
+				document.write(f2.toFixed(2) + ' degrees fahrenheit');
+				break;
+				
+			} else if(program == 3){
+				var dollar = Number(prompt('How many dollars do you have?'));
+				var yen = Number(dollar * 113.84);
+				alert(yen.toFixed(2) + ' yen');
+				break;
+				
+			} else if (program == 4){
+				var yen2 = Number(prompt('How many yens do yo have?'));
+				var dollar2 = Number(yen2 * 0.0088);
+				document.write('$' + dollar2.toFixed(2));
+				break;
+				
+			}else {
+				alert('Try again!');
+				program = Number(prompt("Enter 1 to convert Fahrenheit to Celsius\n\nEnter 2 to convert Celsius to Fahrenheit\n\nEnter 3 to convert Dollar to Yen\n\nEnter 4 to convert Yen to Dollar"));
+				continue;
+			}
+		}
+
+	
+	</script>
+</body>
+</html>

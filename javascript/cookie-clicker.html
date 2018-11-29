@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Meme Clicker</title>
+</head>
+
+<body>
+	<script type = "text/javascript">
+		var CookieClicker = {
+			cookies: 0,
+			click: function () {
+				this.cookies++;
+				if(typeof(Storage) !== "undefined"){
+					localStorage.setItem('cookies', this.cookies);
+				} else {
+					console.log('Sorry your browser does not support saving.')
+				}
+				this.update_screen();
+			},
+			update_screen: function () {
+				document.getElementById("output").innerHTML = this.cookies + ' memes';
+			},
+			init: function(){
+				if(typeof(Storage) !== 'undefined'){
+					var c = localStorage.getItem('cookies');
+					if(c !== null){
+						CookieClicker.cookies = Number(c);
+						CookieClicker.update_screen();
+					} else {
+						console.log('Your browser does not support local storage.');
+					}
+				}
+			}
+		}
+		window.onload = CookieClicker.init;
+	</script>
+	<a href = "Javascript:CookieClicker.click()"><img src = "../images/memes.jpg" alt = "meme"></a>
+	<p id = "output"></p>
+</body>
+</html>

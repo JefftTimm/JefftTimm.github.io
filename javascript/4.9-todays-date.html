@@ -6,11 +6,11 @@
 	</head>
 
 	<body>
-			<script type="text/javascript">
-				// print the Date() and time
-				var d = new Date("10/8/18, 9:50 ");
-				var n = d.getDate();
-				document.getElementById("demo").innerHTML = n;
-			</script>
+		<button type="button"
+		onclick="document.getElementById('demo').innerHTML = Date()">
+		Click me to display Date and Time.</button>
+
+		<p id="demo"></p>
+
 	</body>
 </html>

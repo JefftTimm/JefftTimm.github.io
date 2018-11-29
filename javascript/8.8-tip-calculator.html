@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+	<head>
+			<meta charset="UTF-8">
+			<title>8.8 - Tip Calculator</title>
+		</head>
+
+		<body>
+			<script type="text/javascript">
+				function tipCalc(bill, tipPercentage, group) {
+					// calculate dollar amount using bill and tipPercentage
+					var tip = Number((bill * (tipPercentage/100))/group);
+
+					// return the result:
+					return '$'+tip.toFixed(2)+ ' per group';
+				}
+
+				// ask user for how much the bill was
+				var b = Number(prompt('What is your bill money?'));
+
+				// ask the user how much they want to tip
+				var t = Number(prompt('How much percentage would you like to tip?'));
+				var g = Number(prompt('How many people are in your group?'));
+				// calculate and print the dollar amount of their tip:
+				document.write(tipCalc(b, t, g));
+			</script>
+	</body>
+</html>

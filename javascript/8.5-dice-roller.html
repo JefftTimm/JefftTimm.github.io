@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>8.5 - Dice Roller</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+		function diceRoller() {
+			// calculate roll
+			var roll = Math.ceil(Math.random()*6);
+			
+			
+			
+			
+			// return result
+			return roll;
+		} // end function
+		var i = 0;
+		
+		// call function and print return value
+		while(i <= 20){
+			document.write(diceRoller() + '<br>');
+			i++;
+		}	
+		
+
+	</script>
+</body>
+</html>

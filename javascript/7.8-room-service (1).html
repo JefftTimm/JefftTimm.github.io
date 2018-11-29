@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>7.8 - Room Service</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+		var hour = Number(prompt("What hour is it? ie. 7 for 7am, 15 for 3pm"));
+		// bonus + 2, automatically detect what time it is instead of asking
+		
+		/* use a switch:
+		switch
+			// 1 am
+			case 1:
+			case 2:
+			case 3:
+			
+			// 2pm
+			case 14:
+			case 15:
+		*/
+		switch(hour){
+			case 6:
+			case 7:
+			case 8:
+			case 9:
+			case 10:
+				alert('Continental breakfast is open.');
+				break;
+			case 11:
+			case 12:
+			case 13:
+			case 14:
+				alert('The restraunt is open.');
+				var reserve = confirm('Would you  like to get a restraunt reservation.');
+				var hours = "12:30" 
+				if(reserve){
+					alert('Your reservation time is ' + hours);
+				}
+				break;
+			case 17:
+			case 18:
+			case 19:
+			case 20:
+			case 21:
+				alert('Get room service');
+				break;
+			default:
+				alert('Eat a snack.');
+	   }
+
+	</script>
+</body>
+</html>
